@@ -10,6 +10,8 @@ import (
 
 	pb "github.com/PopTudor/microservices/consignment-service/proto/consignment"
 	"google.golang.org/grpc"
+
+	micro "github.com/micro/go-micro"
 )
 
 func parseFile(file string) (*pb.Consignment, error) {
@@ -23,7 +25,11 @@ func parseFile(file string) (*pb.Consignment, error) {
 }
 
 func main() {
-	const address = "localhost:50051"
+	service := micro.NewService(micro.Name("shippy.consignment.cli"))
+	service.Init()
+
+	client := pb.NewShippingServiceClient("shippy.consignment.service", service.Client())
+
 	const defaultFilename = "consignment.json"
 
 	// Set up a connection to the server.
