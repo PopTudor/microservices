@@ -4,7 +4,7 @@ go 1.12
 
 require (
 	cloud.google.com/go v0.44.3 // indirect
-	github.com/PopTudor/microservices/consignment-service v0.0.0-20190817124405-5d0514cf040e
+	github.com/PopTudor/microservices/consignment-service v0.0.0-20190817125238-0d750c48bf98
 	github.com/google/go-cmp v0.3.1 // indirect
 	github.com/google/pprof v0.0.0-20190723021845-34ac40c74b70 // indirect
 	github.com/hashicorp/golang-lru v0.5.3 // indirect

@@ -47,7 +47,7 @@ type service struct {
 	repo repository
 }
 
-func (s *service) GetConsignment(context.Context, *pb.GetRequest) (*pb.Response, error) {
+func (s *service) GetConsignments(context.Context, *pb.GetRequest) (*pb.Response, error) {
 	consignments := s.repo.GetAll()
 	return &pb.Response{Consignments: consignments}, nil
 }

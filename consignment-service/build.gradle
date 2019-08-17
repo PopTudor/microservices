@@ -1,0 +1,7 @@
+task proto(type: Exec) {
+//    def file = new File("$projectDir/$folderName/my.properties");
+    println 'tutorialspoint'
+    println("*** $projectDir")
+    workingDir "$projectDir"
+    commandLine 'protoc', "-I. --go_out=plugins=grpc:. $projectDir/consignment-service/proto/consignment/consignment.proto"
+}

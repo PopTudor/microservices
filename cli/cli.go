@@ -12,11 +12,6 @@ import (
 	"google.golang.org/grpc"
 )
 
-const (
-	address         = "localhost:50051"
-	defaultFilename = "consignment.json"
-)
-
 func parseFile(file string) (*pb.Consignment, error) {
 	var consignment *pb.Consignment
 	data, err := ioutil.ReadFile(file)
@@ -28,6 +23,9 @@ func parseFile(file string) (*pb.Consignment, error) {
 }
 
 func main() {
+	const address = "localhost:50051"
+	const defaultFilename = "consignment.json"
+
 	// Set up a connection to the server.
 	conn, err := grpc.Dial(address, grpc.WithInsecure())
 	if err != nil {
