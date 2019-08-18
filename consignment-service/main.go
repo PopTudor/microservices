@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	pb "github.com/PopTudor/microservices/consignment-service/proto/consignment"
+	pb "github.com/PopTudor/microservices/shippy-service-consignment/proto/consignment"
 	"github.com/micro/go-micro"
 	"sync"
 )
