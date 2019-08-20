@@ -6,8 +6,8 @@ import (
 	"log"
 	"sync"
 
-	pb "github.com/EwanValentine/shippy-service-consignment/proto/consignment"
-	vesselProto "github.com/EwanValentine/shippy-service-vessel/proto/vessel"
+	pb "github.com/PopTudor/microservices/consignment-service/proto/consignment"
+	vesselProto "github.com/PopTudor/microservices/vessel-service/proto/vessel"
 	"github.com/micro/go-micro"
 )
 
