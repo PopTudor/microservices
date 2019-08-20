@@ -4,7 +4,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/micro/protobuf/protoc-gen-go/micro"
 
 	pb "github.com/EwanValentine/shippy/vessel-service/proto/vessel"
 	"github.com/micro/go-micro"
@@ -32,7 +31,11 @@ func (repo *VesselRepository) FindAvailable(spec *pb.Specification) (*pb.Vessel,
 
 // Our grpc service handler
 type service struct {
-	repo repository
+	repo Repository
+}
+
+func (s *service) Create(context.Context, *pb.Vessel, *pb.Response) error {
+	panic("implement me")
 }
 
 func (s *service) FindAvailable(ctx context.Context, req *pb.Specification, res *pb.Response) error {
